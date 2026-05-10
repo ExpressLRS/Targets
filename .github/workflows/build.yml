@@ -53,4 +53,4 @@ jobs:
 
         echo "Uploading hardware to artifactory"
         aws s3 cp --endpoint-url $AWS_ENDPOINT_URL hardware.zip s3://expresslrs/ExpressLRS/hardware.zip
- 
+
