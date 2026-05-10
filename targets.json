@@ -3599,10 +3599,14 @@
                 "product_name": "RadioMaster TX16S MK3 Internal TX",
                 "lua_name": "RM TX16S MK3",
                 "layout_file": "Radiomaster GX12.json",
+                "features": [ "fan", "per-power-fan" ],
+                "power_high": 7,
+                "power_max": 7,
+                "power_default": 3,
                 "overlay": {
-	                "power_values": [132,120,120,120,120,120,103],
-  	                "power_values2": [-18,-14,-10,-7,-3,0,3],
-  	                "power_values_dual": [-16,-12,-7,-4, 0,4,8],
+                    "power_values": [132,120,120,120,120,120,103],
+                    "power_values2": [-18,-14,-10,-7,-3,0,3],
+                    "power_values_dual": [-16,-12,-7,-4, 0,4,8],
                     "radio_rfsw_ctrl": [15,1,4,12,12,2,0,1]
                 },
                 "upload_methods": ["etx", "wifi"],
