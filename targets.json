@@ -3994,7 +3994,7 @@
         }
     },
     "upoint": {
-        "name": "Upoint",
+        "name": "UPOINT",
         "rx_2400": {
             "nano": {
                 "product_name": "UPOINT Nano 2.4G RX",
