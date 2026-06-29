@@ -3836,6 +3836,28 @@
                 "platform": "esp8285",
                 "firmware": "Unified_ESP8285_2400_RX",
                 "prior_target_name": "MATEK_2400_RX_R24D"
+            },
+            "nanotd": {
+                "product_name": "Skystars 2.4G Nano TD",
+                "lua_name": "S 2.4G Nano TD",
+                "layout_file": "Generic C3 2400 True Diversity.json",
+                "overlay": {
+                    "led_rgb": -1,
+                    "led": 19
+                },
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_2400_RX"
+            },
+            "s2g4rx": {
+                "product_name": "Skystars 2.4G 100mW RX",
+                "lua_name": "S 2.4G 100mW",
+                "layout_file": "Generic C3 2400 PA.json",
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_2400_RX"
             }
         }
     },
