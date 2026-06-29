@@ -3111,6 +3111,17 @@
                 "platform": "esp32-c3",
                 "firmware": "Unified_ESP32C3_2400_RX"
             }
+        },
+        "tx_2400": {
+            "r1": {
+                "product_name": "Oxbot R1 2.4GHz TX",
+                "lua_name": "OXBT R1 2G4 TX",
+                "layout_file": "Oxbot R1 2400.json",
+                "upload_methods": ["wifi"],
+                "min_version": "3.5.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_2400_TX"
+            }
         }
     },
     "quadkopters": {
