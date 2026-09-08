@@ -4217,5 +4217,27 @@
                 "firmware": "Unified_ESP32C3_2400_RX"
             }
         }
+    },
+    "cosmic": {
+	    "name": "Cosmic",
+	    "rx_dual": {
+	        "pulsexp1": {
+	            "product_name": "Cosmic PulseXP1",
+	            "lua_name": "COS XP1",
+	            "layout_file": "Generic C3 LR1121.json",
+	            "overlay": {
+			        "radio_miso": 4,
+			        "radio_mosi": 5,
+	                "serial1_rx": 18,
+	                "serial1_tx": 19,
+	                "power_values_dual": [-10, -6, -3, 2],
+	                "radio_rfsw_ctrl": [15, 0, 12, 4, 4, 9, 0, 10]
+	                },
+	            "upload_methods": ["uart", "wifi", "betaflight"],
+	            "min_version": "3.5.0",
+	            "platform": "esp32-c3",
+	            "firmware": "Unified_ESP32C3_LR1121_RX"
+	        }
+         }
     }
 }
