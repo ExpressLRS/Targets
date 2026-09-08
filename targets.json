@@ -2901,6 +2901,26 @@
                 "platform": "esp8285",
                 "firmware": "Unified_ESP8285_900_RX"
             }
+        },
+        "tx_dual": {
+            "t22pro": {
+                "product_name": "Jumper AION T22 DUO TX",
+                "lua_name": "T22 DUO TX",
+                "layout_file": "Jumper T-22 Pro LR1121.json",
+                "upload_methods": ["uart", "wifi", "etx"],
+                "min_version": "3.6.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            },
+            "t15pro": {
+                "product_name": "Jumper AION T15 DUO TX",
+                "lua_name": "T15 DUO TX",
+                "layout_file": "Jumper T-22 Pro LR1121.json",
+                "upload_methods": ["uart", "wifi", "etx"],
+                "min_version": "3.6.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            }
         }
     },
     "matek": {
