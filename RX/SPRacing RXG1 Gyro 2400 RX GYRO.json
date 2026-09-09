@@ -75,9 +75,11 @@
     "ledidx_rgb_vtx": [1],
     "ledidx_rgb_boot": [0,1],
 
+    "spi_sck": 36,
+    "spi_miso": 37,
+    "spi_mosi": 35,
+
+    "gyro_type": 0,
     "gyro_nss": 34,
-    "gyro_sck": 36,
-    "gyro_miso": 37,
-    "gyro_mosi": 35,
     "gyro_int": 33
 }

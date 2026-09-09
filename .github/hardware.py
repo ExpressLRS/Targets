@@ -7,6 +7,7 @@ class FieldType(Enum):
     BOOL = 2
     FLOAT = 3
     ARRAY = 4
+    STRING = 5
     PIN = 100   # marker
     INPUT = 101
     OUTPUT = 102
@@ -148,11 +149,15 @@ hardware_fields = {
     "vtx_amp_pwm_25mW": FieldType.ARRAY,
     "vtx_amp_pwm_100mW": FieldType.ARRAY,
     "ir_transponder": FieldType.OUTPUT,
+    "spi_sck": FieldType.OUTPUT,
+    "spi_miso": FieldType.INPUT,
+    "spi_mosi": FieldType.OUTPUT,
+    "gyro_type": FieldType.INT,
     "gyro_nss": FieldType.OUTPUT,
-    "gyro_miso": FieldType.INPUT,
-    "gyro_mosi": FieldType.OUTPUT,
-    "gyro_sck": FieldType.OUTPUT,
     "gyro_int": FieldType.INPUT,
+    "gyro_scl": FieldType.OUTPUT,
+    "gyro_sda": FieldType.BIDIR,
+    "gyro_orientation_names": FieldType.STRING,
     "adc_a1": FieldType.ADC,
     "adc_a2": FieldType.ADC
 }
@@ -180,7 +185,9 @@ field_groups = {
         [["screen_sda"], ["screen_sck", "screen_type"], []],
         [["screen_cs", "screen_dc", "screen_mosi"], ["screen_type", "screen_sck", "screen_rst"], []],
         [["vtx_amp_pwm", "vtx_amp_vpd", "vtx_amp_vref", "vtx_nss", "vtx_miso", "vtx_mosi", "vtx_sck", "vtx_amp_vpd_25mW", "vtx_amp_vpd_100mW"], [], []],
-        [["gyro_nss", "gyro_miso", "gyro_mosi", "gyro_sck", "gyro_int"], [], []]
+        [["spi_miso", "spi_mosi", "spi_sck"], [], []],
+        [["gyro_nss"], ["gyro_type", "spi_miso", "spi_mosi", "spi_sck"], []],
+        [["gyro_scl", "gyro_sda"], ["gyro_type"], []]
     ],
     "2400": [
         [["radio_dio1", "radio_miso", "radio_mosi", "radio_sck", "radio_nss"], [], ["radio_rst", "pwm_outputs"]],
