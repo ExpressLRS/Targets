@@ -4025,6 +4025,24 @@
             }
         }
     },
+    "stphobby": {
+        "name": "STPHOBBY",
+        "rx_2400": {
+            "nano": {
+                "product_name": "STPHOBBY Nano 2.4G RX",
+                "lua_name": "STPH Nano 2G4 RX",
+                "layout_file": "Generic C3 2400 PA.json",
+                "overlay": {
+                    "led_rgb": -1,
+                    "led": 8
+                },
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_2400_RX"
+            }
+        }
+    },
     "spracing": {
         "name": "SPRacing",
         "rx_2400": {
