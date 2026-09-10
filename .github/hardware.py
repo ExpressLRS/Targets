@@ -39,6 +39,7 @@ hardware_fields = {
     "radio_rfsw_ctrl": FieldType.ARRAY,
     "ant_ctrl": FieldType.OUTPUT,
     "ant_ctrl_compl": FieldType.OUTPUT,
+    "ant_group": FieldType.OUTPUT,
     "power_enable": FieldType.OUTPUT,
     "power_apc1": FieldType.OUTPUT,
     "power_apc2": FieldType.OUTPUT,

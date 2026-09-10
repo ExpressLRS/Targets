@@ -3139,6 +3139,20 @@
                 "min_version": "3.5.0",
                 "platform": "esp32-c3",
                 "firmware": "Unified_ESP32C3_2400_RX"
+            },
+            "rsv2": {
+                "product_name": "NewBeeDrone Quadversity Receiver 2.4GHz RX",
+                "lua_name": "NBD RSV2 2G4RX",
+                "layout_file": "Generic C3 2400 PA.json",
+                "overlay": {
+                    "power_rxen": -1,
+                    "ant_ctrl": 18,
+                    "ant_group": 10
+                },
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "4.1.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_2400_RX"
             }
         }
     },
