@@ -1,0 +1,27 @@
+name: "PR Approval Counter"
+
+on:
+  pull_request_review:
+    types: [submitted, dismissed]
+  pull_request:
+    types: [opened, reopened, synchronize]
+  workflow_dispatch:
+
+permissions:
+  pull-requests: write
+  issues: write
+  contents: read
+
+jobs:
+  update-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Calculate Approvals via External Script
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const script = require('./.github/pr-approval-counter.js');
+            await script({ github, context });
