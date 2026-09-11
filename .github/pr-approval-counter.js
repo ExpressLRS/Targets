@@ -4,38 +4,25 @@ module.exports = async ({ github, context }) => {
 
   // Helper function to process a single PR's approval labels
   async function processPullRequest(prNumber, targetBranch) {
-    // 1. Get the minimum required approvals from branch protection rules
-    let requiredApprovals = 1;
-    try {
-      const { data: protection } = await github.rest.repos.getBranchProtection({
-        owner,
-        repo,
-        branch: targetBranch,
-      });
-      if (protection.required_pull_request_reviews) {
-        requiredApprovals = protection.required_pull_request_reviews.required_approving_review_count || 1;
-      }
-    } catch (e) {
-      console.log(`No branch protection rule found for ${targetBranch}. Defaulting to 1 required approval.`);
-    }
+    let requiredApprovals = 5;
 
-    // 2. Get all reviews for the current PR
+    // 1. Get all reviews for the current PR
     const { data: reviews } = await github.rest.pulls.listReviews({
       owner,
       repo,
       pull_number: prNumber,
     });
 
-    // 3. Track the latest state of each unique reviewer
+    // 2. Track the latest state of each unique reviewer
     const reviewerStates = {};
     for (const review of reviews) {
       reviewerStates[review.user.login] = review.state;
     }
 
-    // 4. Count unique active approvals
+    // 3. Count unique active approvals
     const approvalCount = Object.values(reviewerStates).filter(state => state === 'APPROVED').length;
 
-    // 5. Get the existing labels on the PR
+    // 4. Get the existing labels on the PR
     const { data: prDetails } = await github.rest.pulls.get({
       owner,
       repo,
@@ -43,7 +30,7 @@ module.exports = async ({ github, context }) => {
     });
     const currentLabels = prDetails.labels.map(l => l.name);
 
-    // 6. Handle the zero-approvals case
+    // 5. Handle the zero-approvals case
     if (approvalCount === 0) {
       for (const label of currentLabels) {
         if (label.startsWith('Approved: ')) {
@@ -58,14 +45,14 @@ module.exports = async ({ github, context }) => {
       return;
     }
 
-    // 7. Define label name and color if approvalCount > 0
+    // 6. Define label name and color if approvalCount > 0
     const targetLabel = `Approved: ${approvalCount}/${requiredApprovals}`;
     let labelColor = 'FEF2C0'; // Yellow (In Progress)
     if (approvalCount >= requiredApprovals) {
       labelColor = '0E8A16'; // Vibrant Green (Target Met)
     }
 
-    // 8. Ensure the label exists in the repo with the correct color
+    // 7. Ensure the label exists in the repo with the correct color
     try {
       await github.rest.issues.createLabel({
         owner,
@@ -83,7 +70,7 @@ module.exports = async ({ github, context }) => {
       }).catch(() => {});
     }
 
-    // 9. Clean up obsolete counter labels
+    // 8. Clean up obsolete counter labels
     for (const label of currentLabels) {
       if (label.startsWith('Approved: ') && label !== targetLabel) {
         await github.rest.issues.removeLabel({
@@ -95,7 +82,7 @@ module.exports = async ({ github, context }) => {
       }
     }
 
-    // 10. Apply the new dynamic label
+    // 9. Apply the new dynamic label
     if (!currentLabels.includes(targetLabel)) {
       await github.rest.issues.addLabels({
         owner,
