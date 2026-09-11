@@ -3803,7 +3803,21 @@
                 "lua_name":  "RM ER16",
                 "layout_file": "Radiomaster ER Series.json",
                 "overlay": {
-                    "pwm_outputs": [21, 35, 13, 14, 11, 12, 2, 9, 37, 36, 39, 38, 41, 40, 47, 42]
+                    "pwm_outputs": [21, 35, 13, 14, 11, 12, 2, 9, 37, 36, 39, 38, 41, 40, 47, 42],
+                    "vsrc2": 17,
+                    "vsrc2_cal_min": 3500,
+                    "vsrc2_cal_max": 16000,
+                    "vsrc2_atten": 7,
+                    "vsrc2_offset": -12,
+                    "vsrc2_scale": 1540,
+                    "vsrc2_noreading": 8,
+                    "vsrc3": 18,
+                    "vsrc3_cal_min": 3500,
+                    "vsrc3_cal_max": 16000,
+                    "vsrc3_atten": 7,
+                    "vsrc3_offset": -12,
+                    "vsrc3_scale": 1540,
+                    "vsrc3_noreading": 8
                 },
                 "upload_methods": ["uart", "wifi"],
                 "min_version": "3.5.0",

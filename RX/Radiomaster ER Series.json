@@ -33,5 +33,14 @@
   "vbat_scale": 409,
   "vbat_atten": 7,
   "vbat_cal_min": 3600,
-  "vbat_cal_max": 70000
+  "vbat_cal_max": 70000,
+  "vbat_noreading": -1,
+
+  "vsrc1": 19,
+  "vsrc1_atten": 7,
+  "vsrc1_cal_min": 3500,
+  "vsrc1_cal_max": 16000,
+  "vsrc1_offset": -17,
+  "vsrc1_scale": 1547,
+  "vsrc1_noreading": 8
 }
