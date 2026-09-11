@@ -3788,6 +3788,56 @@
                 "min_version": "3.5.0",
                 "platform": "esp32",
                 "firmware": "Unified_ESP32_LR1121_RX"
+            },
+            "er12": {
+                "product_name": "RadioMaster ER12 Dual Band True Diversity RX",
+                "lua_name":  "RM ER12",
+                "layout_file": "Radiomaster ER Series.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.5.0",
+                "platform": "esp32-s3",
+                "firmware": "Unified_ESP32S3_LR1121_RX"
+            },
+            "er16": {
+                "product_name": "RadioMaster ER16 Dual Band True Diversity RX",
+                "lua_name":  "RM ER16",
+                "layout_file": "Radiomaster ER Series.json",
+                "overlay": {
+                    "pwm_outputs": [21, 35, 13, 14, 11, 12, 2, 9, 37, 36, 39, 38, 41, 40, 47, 42]
+                },
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.5.0",
+                "platform": "esp32-s3",
+                "firmware": "Unified_ESP32S3_LR1121_RX"
+            },
+            "er3p": {
+                "product_name": "RadioMaster ER3pro Dual Band True Diversity RX",
+                "lua_name":  "RM ER3Pro",
+                "layout_file": "Generic LR1121 True Diversity.json",
+                "overlay": {
+                    "radio_rfsw_ctrl": [15, 4, 4, 0, 0, 14, 0, 13],
+                    "power_values": [13, 16, 19, 22],
+                    "power_values_dual": [-8, -5, -1, 3],
+                    "pwm_outputs": [4, 23, 19],
+                    "vbat": 35,
+                    "vbat_offset": 11,
+                    "vbat_scale": 409,
+                    "vbat_noreading": 8,
+                    "vbat_atten": 7,
+                    "vbat_cal_min": 3600,
+                    "vbat_cal_max": 70000,
+                    "vsrc1": 38,
+                    "vsrc1_atten": 7,
+                    "vsrc1_cal_min": 3500,
+                    "vsrc1_cal_max": 16000,
+                    "vsrc1_offset": -26,
+                    "vsrc1_scale": 1552,
+                    "vsrc1_noreading": -1
+                },
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_RX"
             }
         }
     },
