@@ -21,6 +21,7 @@
   "power_control": 0,
   "power_values": [13, 16, 19, 22],
   "power_values_dual": [-8, -5, -1, 3],
+  "power_lna_gain": 12,
   "led_rgb": 48,
   "led_rgb_isgrb": true,
   "ledidx_rgb_status": [0],
@@ -30,5 +31,7 @@
   "vbat": 10,
   "vbat_offset": -30,
   "vbat_scale": 409,
-  "vbat_atten": 7
+  "vbat_atten": 7,
+  "vbat_cal_min": 3600,
+  "vbat_cal_max": 70000
 }
