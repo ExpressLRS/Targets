@@ -2699,7 +2699,7 @@
                 "platform": "esp32",
                 "firmware": "Unified_ESP32_2400_TX"
             },
-            "t-15-H7": {
+            "t-15-h7": {
                 "product_name": "Jumper AION T15 H7 2.4GHz TX",
                 "lua_name": "T15 H7 2G4 TX",
                 "layout_file": "Jumper T-20 2400.json",
