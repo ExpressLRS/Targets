@@ -1,0 +1,22 @@
+{
+    "i2c_scl": 8,
+    "i2c_sda": 9,
+    "radio_dio1": 2,
+    "radio_miso": 10,
+    "radio_mosi": 7,
+    "radio_nss": 5,
+    "radio_sck": 6,
+    "power_min": 0,
+    "power_high": 0,
+    "power_max": 0,
+    "power_default": 0,
+    "power_control": 0,
+    "power_values": [13],
+    "power_lna_gain": 0,
+    "pwm_outputs": [0,18,20,19,21,4],
+    "led": 3,
+    "vbat": 1,
+    "vbat_scale": 910,
+    "vbat_offset": 0,
+    "vbat_atten": 7
+}
