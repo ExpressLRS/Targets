@@ -4305,8 +4305,8 @@
         },
         "rx_dual":{
             "single": {
-            "product_name": "Zerodrag C3 900/2400 Dual Band RX",
-            "lua_name": "Zerodrag DB RX",
+            "product_name": "Zerodrag Nexus Duo 900/2400 Dual Band RX",
+            "lua_name": "ZD Nexus Duo RX",
             "layout_file": "Generic C3 LR1121.json",
             "overlay": {
                 "radio_rfsw_ctrl": [15,0,12,8,8,6,0,5],
