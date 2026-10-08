@@ -1189,6 +1189,15 @@
                 "firmware": "Unified_ESP8285_2400_RX",
                 "prior_target_name": "DIY_2400_RX_ESP8285_SX1280"
             },
+            "aioc3rx": {
+                "product_name": "EMAX C3 AIO 2.4GHz RX",
+                "lua_name": "EMAX C3 2G4 AIO",
+                "layout_file": "Generic C3 2400.json",
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_2400_RX"
+            },
             "pa": {
                 "product_name": "EMAX 2.4GHz PA RX",
                 "lua_name": "EMAX 2400RX",
