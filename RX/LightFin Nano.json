@@ -13,7 +13,7 @@
     "power_control": 0,
     "power_values": [13],
     "power_lna_gain": 0,
-    "pwm_outputs": [0,18,20,19,21,4],
+    "pwm_outputs": [0,18,20,19,21],
     "led": 3,
     "vbat": 1,
     "vbat_scale": 910,
