@@ -19,7 +19,7 @@
     "power_min": 0,
     "power_high": 3,
     "power_max": 3,
-    "power_default": 0,
+    "power_default": 3,
     "power_control": 0,
     "power_values": [24, 32, 38, 44],
     "power_values_dual": [-24,-18,-12,-4],
