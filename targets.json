@@ -1986,7 +1986,7 @@
                 "firmware": "Unified_ESP32C3_LR2021_RX"
             },
             "c3-lr2021-gemx": {
-                "product_name": "GEPRC LINKFLOW LR20 Gemini Crossband RX",
+                "product_name": "GEPRC LINKFLOW LR20 Gemini Xrossband RX",
                 "lua_name": "GEPR LR20 GX RX",
                 "layout_file": "Generic C3 LR2021 True Diversity.json",
                 "overlay": {
