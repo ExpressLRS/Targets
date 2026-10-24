@@ -1733,8 +1733,25 @@
                 "min_version": "3.4.0",
                 "platform": "esp32",
                 "firmware": "Unified_ESP32_LR1121_TX"
+            },
+            "c3-plain-2021": {
+                "product_name": "Generic C3 LR2021 2.4/900 TX",
+                "lua_name": "C3 LR2021 TX",
+                "layout_file": "Generic C3 LR2021.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "4.0.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_LR2021_TX"
+            },
+            "s3-plain-2021": {
+                "product_name": "Generic S3 LR2021 2.4/900 TX",
+                "lua_name": "S3 LR2021 TX",
+                "layout_file": "Generic S3 LR2021.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "4.0.0",
+                "platform": "esp32-s3",
+                "firmware": "Unified_ESP32S3_LR2021_TX"
             }
-
         },
         "rx_dual": {
             "true_diversity": {
@@ -1763,6 +1780,15 @@
                 "min_version": "3.5.0",
                 "platform": "esp32-c3",
                 "firmware": "Unified_ESP32C3_LR1121_RX"
+            },
+            "c3-plain-2021": {
+                "product_name": "Generic C3 LR2021 2.4/900 RX",
+                "lua_name": "C3 LR2021 RX",
+                "layout_file": "Generic C3 LR2021.json",
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "4.0.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_LR2021_RX"
             },
             "c3-pwm": {
                 "product_name": "Generic C3 LR1121 2.4/900 PWM RX",
@@ -1945,6 +1971,19 @@
                 "min_version": "3.5.2",
                 "platform": "esp32-c3",
                 "firmware": "Unified_ESP32C3_LR1121_RX"
+            },
+            "c3-lr2021": {
+                "product_name": "GEPRC LINKFLOW LR20 Dual-Band RX",
+                "lua_name": "GEPR LR20 DB RX",
+                "layout_file": "Generic C3 LR2021.json",
+                "overlay": {
+                    "power_values_dual": [-14, -6, 2, 10],
+                    "radio_rfsw_ctrl": [8, 16, 0, 0, 0, 24, 255]
+                },
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "4.2.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_LR2021_RX"
             }
         },
         "tx_dual": {
