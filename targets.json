@@ -984,6 +984,7 @@
                 "product_name": "DIY STM32 SX1272 TX",
                 "upload_methods": ["stlink"],
                 "min_version": "3.3.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "DIY_900_TX_STM32_SX1272",
                 "stlink": {
@@ -1028,6 +1029,7 @@
                 "product_name": "DIY STM32 SX1272 RX",
                 "upload_methods": ["stlink"],
                 "min_version": "3.3.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "DIY_900_RX_STM32_SX1272",
                 "stlink": {
@@ -1350,6 +1352,7 @@
                 "product_name": "FrSky R9M 900MHz TX",
                 "upload_methods": ["stlink", "stock", "wifi"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "Frsky_TX_R9M",
                 "features": ["buzzer", "unlock-higher-power", "fan"],
@@ -1363,6 +1366,7 @@
                 "product_name": "FrSky R9M Lite 900MHz TX",
                 "upload_methods": ["stlink", "stock"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "Frsky_TX_R9M_LITE",
                 "stlink": {
@@ -1375,6 +1379,7 @@
                 "product_name": "FrSky R9M Lite Pro 900MHz TX",
                 "upload_methods": ["stlink","stock"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "Frsky_TX_R9M_LITE_PRO",
 		"features": ["unlock-higher-power"],
@@ -1390,6 +1395,7 @@
                 "product_name": "FrSky R9MM/Mini 900MHz RX",
                 "upload_methods": ["stlink", "betaflight"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "Frsky_RX_R9MM_R9MINI",
                 "features": ["sbus-uart"],
@@ -1403,6 +1409,7 @@
                 "product_name": "FrSky R9 Slim 900MHz RX",
                 "upload_methods": ["stlink", "betaflight"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "Frsky_RX_R9SLIM",
                 "stlink": {
@@ -1415,6 +1422,7 @@
                 "product_name": "FrSky R9 Slim Plus 900MHz RX",
                 "upload_methods": ["stlink", "betaflight"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "Frsky_RX_R9SLIMPLUS",
                 "stlink": {
@@ -1427,6 +1435,7 @@
                 "product_name": "FrSky R9 Slim Plus OTA 900MHz RX",
                 "upload_methods": ["stlink", "betaflight"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "Frsky_RX_R9SLIMPLUS_OTA",
                 "stlink": {
@@ -1439,6 +1448,7 @@
                 "product_name": "FrSky R9MX 900MHz RX",
                 "upload_methods": ["stlink", "betaflight"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "Frsky_RX_R9MX",
                 "stlink": {
@@ -1575,6 +1585,7 @@
                 "product_name": "Generic STM32 PP 2.4Ghz RX",
                 "upload_methods": ["stlink", "betaflight"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "DIY_2400_RX_STM32_CCG_Nano_v0_5",
                 "stlink": {
@@ -2073,6 +2084,7 @@
                 "product_name": "HappyModel ES915 TX",
                 "upload_methods": ["stlink", "stock"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "HappyModel_TX_ES915TX",
                 "has_buzzer": true,
@@ -2099,6 +2111,7 @@
                 "product_name": "HappyModel ES915 RX",
                 "upload_methods": ["stlink", "betaflight"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "HappyModel_RX_ES915RX",
                 "stlink": {
@@ -2178,6 +2191,7 @@
                 "product_name": "HappyModel PP 2.4GHz RX",
                 "upload_methods": ["stlink", "betaflight"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "HappyModel_PP_2400_RX",
                 "stlink": {
@@ -2633,6 +2647,7 @@
                 "product_name": "Ghost 2.4GHz TX",
                 "upload_methods": ["stlink", "stock"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "GHOST_2400_TX",
                 "features": ["buzzer"],
@@ -2646,6 +2661,7 @@
                 "product_name": "Ghost Lite 2.4GHz TX",
                 "upload_methods": ["stlink","stock"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "GHOST_2400_TX_LITE",
                 "features": ["buzzer"],
@@ -2661,6 +2677,7 @@
                 "product_name": "Ghost Atto 2.4GHz RX",
                 "upload_methods": ["stlink", "betaflight"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "GHOST_ATTO_2400_RX",
                 "stlink": {
@@ -2949,6 +2966,7 @@
                 "product_name": "Jumper 900 Mini RX",
                 "upload_methods": ["stlink", "betaflight"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "Jumper_RX_R900MINI",
                 "stlink": {
@@ -3048,6 +3066,7 @@
                 "product_name": "NamimnoRC Voyager 900MHz TX",
                 "upload_methods": ["stlink", "stock"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "NamimnoRC_VOYAGER_900_TX",
                 "features": ["fan"],
@@ -3074,6 +3093,7 @@
                 "product_name": "NamimnoRC Voyager STM 900MHz RX",
                 "upload_methods": ["stlink", "betaflight"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "NamimnoRC_VOYAGER_900_RX",
                 "stlink": {
@@ -3098,6 +3118,7 @@
                 "product_name": "NamimnoRC Flash 2.4GHz TX",
                 "upload_methods": ["stlink", "stock"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "NamimnoRC_FLASH_2400_TX",
                 "features": ["fan"],
@@ -3125,6 +3146,7 @@
                 "product_name": "NamimnoRC Flash STM 2.4GHz RX",
                 "upload_methods": ["stlink", "betaflight"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "NamimnoRC_FLASH_2400_RX",
                 "stlink": {
@@ -3983,6 +4005,7 @@
                 "product_name": "SIYI FM30 2.4GHz TX",
                 "upload_methods": ["dfu", "stlink"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "FM30_TX",
                 "stlink": {
@@ -3995,6 +4018,7 @@
                 "product_name": "SIYI FM30 Mini 2.4GHz RX as TX",
                 "upload_methods": ["uart", "stlink"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "FM30_RX_MINI_AS_TX",
                 "stlink": {
@@ -4009,6 +4033,7 @@
                 "product_name": "SIYI FM30 Mini 2.4GHz RX",
                 "upload_methods": ["uart", "stlink", "betaflight"],
                 "min_version": "3.0.0",
+                "max_version": "4.0.0",
                 "platform": "stm32",
                 "firmware": "FM30_RX_MINI",
                 "stlink": {
