@@ -67,6 +67,11 @@ def warn(msg, code=None):
         print("WARNING: " + msg)
 
 
+def parse_version(version):
+    m = re.fullmatch(r'(\d+)\.(\d+)\.(\d+)', version)
+    return tuple(int(part) for part in m.groups()) if m else None
+
+
 def validate_stm32(vendor, type, devname, device):
     for method in device['upload_methods']:
         if method not in ['stlink', 'dfu', 'uart', 'wifi', 'betaflight', 'stock']:
@@ -173,6 +178,12 @@ def validate_devices(vendor, type, devname, device):
         error(f'device "{vendor}.{type}.{devname}" must have a "upload_methods" child element', 'missing_upload_methods')
     if 'min_version' not in device:
         error(f'device "{vendor}.{type}.{devname}" must have a "min_version" child element', 'missing_min_version')
+    if 'max_version' in device:
+        max_version = parse_version(device['max_version'])
+        if max_version is None:
+            error(f'device "{vendor}.{type}.{devname}" "max_version" must be a version like "4.0.0"', 'invalid_max_version')
+        elif 'min_version' in device and max_version <= parse_version(device['min_version']):
+            error(f'device "{vendor}.{type}.{devname}" "max_version" must be greater than "min_version"', 'max_version_not_after_min_version')
 
     if 'firmware' not in device:
         error(f'device "{vendor}.{type}.{devname}" must have a "firmware" child element', 'missing_firmware')
