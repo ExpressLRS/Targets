@@ -1204,6 +1204,34 @@
                 "firmware": "Unified_ESP8285_2400_RX",
                 "prior_target_name": "BETAFPV_Nano_2400_RX"
             }
+        },
+        "rx_dual": {
+            "c3_true_diversity": {
+                "product_name": "EMAX 2.4/900 RX Dual",
+                "lua_name": "EMAX C3 LR1121 R",
+                "layout_file": "Generic C3 LR1121 True Diversity.json",
+                "overlay": {
+                    "power_values": [13, 17, 19, 22 ],
+                    "power_values_dual": [-14, -9, -5, 3]
+                },
+                "upload_methods": ["uart","wifi","betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_LR1121_RX"
+            },
+            "rx-dual-single": {
+                "product_name": "EMAX 2.4/900 RX",
+                "lua_name": "EMAX C3 LR1121 R",
+                "layout_file": "Generic C3 LR1121.json",
+                "overlay": {
+                    "power_values": [13, 17, 19, 22],
+                    "power_values_dual": [-12, -7, -4, 1]
+                },
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_LR1121_RX"
+            }
         }
     },
     "flycolor": {
