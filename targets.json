@@ -4523,5 +4523,22 @@
                 "firmware": "Unified_ESP32C3_2400_RX"
             }
         }
+    },
+    "yuntufpv": {
+        "name": "YuntuFPV",
+        "rx_2400": {
+            "true_diversity": {
+                "product_name": "YuntuFPV True Diversity 2.4GHz RX",
+                "lua_name": "YuntuFPV TD RX",
+                "layout_file": "Generic 2400 True Diversity PA.json",
+                "overlay": {
+                    "radio_dcdc": true
+                },
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.1.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_2400_RX"
+            }
+        }
     }
 }
