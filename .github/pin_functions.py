@@ -37,6 +37,7 @@ mcu_pin_functions = {
         17: INPUT | OUTPUT,
         18: INPUT | OUTPUT,
         19: INPUT | OUTPUT,
+        20: INPUT | OUTPUT,
         21: INPUT | OUTPUT,
         22: INPUT | OUTPUT,
         23: INPUT | OUTPUT,
