@@ -4523,5 +4523,19 @@
                 "firmware": "Unified_ESP32C3_2400_RX"
             }
         }
+    },
+    "senduwing": {
+        "name": "Senduwing",
+        "tx_2400": {
+            "h17": {
+                "product_name": "Senduwing H17",
+                "lua_name": "Senduwing H17",
+                "layout_file": "Senduwing H17.json",
+                "upload_methods": ["uart", "wifi", "etx"],
+                "min_version": "3.5.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_2400_TX"
+            }
+        }
     }
 }
