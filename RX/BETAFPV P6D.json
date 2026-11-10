@@ -18,6 +18,7 @@
     "power_default": 1,
     "power_control": 0,
     "power_values": [-10,-6,-3,1],
+    "power_lna_gain": 12,
     "led_rgb": 38,
     "led_rgb_isgrb": true,
     "ledidx_rgb_status": [0],
@@ -31,5 +32,7 @@
     "i2c_scl": 33,
     "power_txen": 21,
     "power_txen_2": 26,
-    "vbat_atten": 7
+    "vbat_atten": 7,
+    "vbat_cal_min": 3500,
+    "vbat_cal_max": 25200
 }
