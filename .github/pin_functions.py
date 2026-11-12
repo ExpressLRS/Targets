@@ -75,7 +75,7 @@ mcu_pin_functions = {
         19: INPUT | OUTPUT | ADC,
         20: INPUT | OUTPUT | ADC,
         21: INPUT | OUTPUT,
-        # 26: INPUT | OUTPUT, # Used for flash
+        26: INPUT | OUTPUT,   # Used for flash, SPICS1
         # 27: INPUT | OUTPUT, # Used for flash
         # 28: INPUT | OUTPUT, # Used for flash
         # 29: INPUT | OUTPUT, # Used for flash
