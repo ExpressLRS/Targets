@@ -692,8 +692,8 @@
                 "firmware": "Unified_ESP32S3_LR1121_RX"
             },
             "mono-lr2021": {
-                "product_name": "BlackSheep IP ELRNNN D1",
-                "lua_name": "BSIP ELRNNN",
+                "product_name": "BlackSheep IP ES4 RX",
+                "lua_name": "BSIP ES4 RX",
                 "layout_file": "Generic C3 LR2021.json",
                 "overlay": {
                     "radio_dio1": 10,
@@ -710,8 +710,8 @@
                 "firmware": "Unified_ESP32C3_LR2021_RX"
             },
             "dual-lr2021": {
-                "product_name": "BlackSheep IP ELRNDV D1",
-                "lua_name": "BSIP ELRNDV",
+                "product_name": "BlackSheep IP ED12 RX",
+                "lua_name": "BSIP ED12 RX",
                 "layout_file": "Generic C3 LR2021 True Diversity.json",
                 "overlay": {
                     "serial_rx": 44,
