@@ -512,6 +512,55 @@
                 "firmware": "Unified_ESP8285_2400_RX",
                 "prior_target_name": "BETAFPV_Nano_2400_RX"
             },
+            "p4": {
+                "product_name": "BETAFPV P4 2.4G RX",
+                "lua_name": "BFPV P4 2.4G",
+                "layout_file": "Generic C3 2400 PWM.json",
+                "overlay": {
+                    "pwm_outputs": [9,10,20,21],
+                    "vbat_offset": 18,
+                    "vbat_scale": 1284,
+                    "vbat_atten": 7,
+                    "i2c_scl": 19,
+                    "i2c_sda": 18
+                },
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_2400_RX"
+            },
+            "p6": {
+                "product_name": "BETAFPV P6 2.4G RX",
+                "lua_name": "BFPV P6 2.4G",
+                "layout_file": "Generic C3 2400 PWM.json",
+                "overlay": {
+                    "vbat_offset": 18,
+                    "vbat_scale": 1284,
+                    "vbat_atten": 7
+                },
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_2400_RX"
+            },
+            "p6d": {
+                "product_name": "BETAFPV P6D 2.4G RX",
+                "lua_name": "BFPV P6D 2.4G",
+                "layout_file": "BETAFPV P6D.json",
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32-s3",
+                "firmware": "Unified_ESP32S3_2400_RX"
+            },
+            "p8d": {
+                "product_name": "BETAFPV P8D 2.4G RX",
+                "lua_name": "BFPV P8D 2.4G",
+                "layout_file": "BETAFPV P8D.json",
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32-s3",
+                "firmware": "Unified_ESP32S3_2400_RX"
+            },
             "pwmp": {
                 "product_name": "BETAFPV PWM 2.4GHz RX",
                 "lua_name": "BFPV PWM 2G4RX",
