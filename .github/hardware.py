@@ -110,6 +110,7 @@ hardware_fields = {
     "thermal_lm75a": FieldType.BOOL,
     "pwm_outputs": FieldType.ARRAY,
     "pwm_out_only": FieldType.BOOL,
+    "pwm_outputs_inverted": FieldType.ARRAY,
     "vbat": FieldType.ADC,
     "vbat_cal_min": FieldType.INT,
     "vbat_cal_max": FieldType.INT,
@@ -178,6 +179,7 @@ field_groups = {
         [["five_way1", "five_way2", "five_way3"], [], []],
         [["misc_fan_pwm", "misc_fan_speeds"], [], []],
         [["pwm_out_only"], ["pwm_outputs"], []],
+        [["pwm_outputs_inverted"], ["pwm_outputs"], []],
         [["vbat", "vbat_cal_min", "vbat_cal_max", "vbat_offset", "vbat_scale"], [], []],
         [["vsrc1", "vsrc1_cal_min", "vsrc1_cal_max", "vsrc1_offset", "vsrc1_scale"], [], []],
         [["vsrc2", "vsrc2_cal_min", "vsrc2_cal_max", "vsrc2_offset", "vsrc2_scale"], [], []],
@@ -420,6 +422,9 @@ def validate_pwm_outputs(target, layout):
                     layout[field] in layout['pwm_outputs'] and \
                     field not in allowable_pwm_shared:
                 had_error |= report_error('invalid_pwm_pin_sharing', f'device "{target}" pwm_output pin {layout[field]} is not allowed to be shared with {field}')
+        for pin in layout.get('pwm_outputs_inverted', []):
+            if pin not in layout['pwm_outputs']:
+                had_error |= report_error('invalid_pwm_outputs_inverted', f'device "{target}" pwm_outputs_inverted pin {pin} is not in pwm_outputs')
     return had_error
 
 
