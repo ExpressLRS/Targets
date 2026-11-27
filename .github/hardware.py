@@ -110,6 +110,7 @@ hardware_fields = {
     "thermal_lm75a": FieldType.BOOL,
     "pwm_outputs": FieldType.ARRAY,
     "pwm_out_only": FieldType.BOOL,
+    "pwm_output_drive": FieldType.ARRAY,
     "vbat": FieldType.ADC,
     "vbat_cal_min": FieldType.INT,
     "vbat_cal_max": FieldType.INT,
@@ -178,6 +179,7 @@ field_groups = {
         [["five_way1", "five_way2", "five_way3"], [], []],
         [["misc_fan_pwm", "misc_fan_speeds"], [], []],
         [["pwm_out_only"], ["pwm_outputs"], []],
+        [["pwm_output_drive"], ["pwm_outputs"], []],
         [["vbat", "vbat_cal_min", "vbat_cal_max", "vbat_offset", "vbat_scale"], [], []],
         [["vsrc1", "vsrc1_cal_min", "vsrc1_cal_max", "vsrc1_offset", "vsrc1_scale"], [], []],
         [["vsrc2", "vsrc2_cal_min", "vsrc2_cal_max", "vsrc2_offset", "vsrc2_scale"], [], []],
@@ -420,6 +422,12 @@ def validate_pwm_outputs(target, layout):
                     layout[field] in layout['pwm_outputs'] and \
                     field not in allowable_pwm_shared:
                 had_error |= report_error('invalid_pwm_pin_sharing', f'device "{target}" pwm_output pin {layout[field]} is not allowed to be shared with {field}')
+        if 'pwm_output_drive' in layout:
+            if len(layout['pwm_output_drive']) != len(layout['pwm_outputs']):
+                had_error |= report_error('invalid_pwm_output_drive', f'device "{target}" pwm_output_drive must have one value per pwm_outputs pin')
+            for value in layout['pwm_output_drive']:
+                if value not in (0, 1, 2):
+                    had_error |= report_error('invalid_pwm_output_drive', f'device "{target}" pwm_output_drive values must be 0 (direct), 1 (low-side N-channel MOSFET) or 2 (inverted)')
     return had_error
 
 

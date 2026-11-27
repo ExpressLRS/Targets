@@ -4622,5 +4622,19 @@
                 "firmware": "Unified_ESP32_2400_RX"
             }
         }
+    },
+    "lightfin": {
+        "name": "LightFin",
+        "rx_2400": {
+            "nano": {
+                "product_name": "LightFin Nano 2.4GHz RX",
+                "lua_name": "LGT Nano 2G4 RX",
+                "layout_file": "LightFin Nano.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.5.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_2400_RX"
+            }
+        }
     }
 }
